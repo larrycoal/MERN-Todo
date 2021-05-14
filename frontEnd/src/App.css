@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body,#root{
+    min-height: 100vh;
+}
+.home-wrapper{
+    display: grid;
+    grid-template-areas: 
+    "list header header"
+    "list home home"
+    "list home home";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+.home{
+    grid-area: home;
+    text-align: center;
+    margin: auto auto;
+    font-size: 70px;
+    font-weight: 800;
+    color: #20696b;
+}
+nav{
+    grid-area: header;
+    padding: 20px 10px;
+    background-color: rgb(195, 236, 236);
+}
+nav a {
+    text-decoration: none;
+    color: rgb(63, 68, 19);
+    font-size: large;
+}
+nav i {
+    margin: 0px 10px;
+    color: rgb(44, 42, 42);
+}
+.create-todo-wrapper{
+    grid-area: list;
+    height: 100vh;
+    width: fit-content;
+    background: #584f4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.create-todo-wrapper h2{
+    text-align: center;
+}
+.todoItem_wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+}
+table{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(34, 30, 30);
+}
+thead td{
+ font-size: larger;
+ font-weight: 800;
+ padding: 0px 30px;
+}
+tbody td{
+    padding: 10px 0px;
+    text-transform: uppercase;
+    padding: 10px 30px ;
+}
+form{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    gap:20px;
+    padding: 20px 0px;
+}
+input[type="text"]{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+button{
+    padding: 10px;
+    background-color: rgb(95, 95, 240);
+    color: white;
+    font-size: large;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.error{
+    color: red;
+    font-size: small;
+    margin: 0 auto;
+}
+.todo-wrapper{
+   flex-grow: 1;
+   overflow: scroll;
+}
+.todo-wrapper h3{
+    padding: 10px;
+    font-size: xx-large;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.todo-wrapper ul{
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.todoList li{
+   display: flex;
+    border-bottom: 1px solid rgb(172, 167, 167);
+    cursor: pointer;
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+}
+i {
+    color: white;
+}
+.todoList a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+.todoList li span{
+    padding: 10px;
+}
+i{
+    cursor: pointer;
+}
+.emptyItem{
+    text-transform: uppercase;
+    font-size: larger;
+    margin: 10px 20px;
+}
+.exit{
+    text-decoration: none;
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+}
