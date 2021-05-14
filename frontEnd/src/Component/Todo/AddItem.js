@@ -48,24 +48,21 @@ class AddItem extends Component {
   }
   showItem() {
     const { list,itemName } = this.state;
-    return !list? (
+    console.log(list)
+    return list.length < 1? (
       <div className="emptyItem">ADD ITEM TO {itemName}</div>
     ) : (
-      <table>
-        <thead>
-          <td>Name</td>
-          <td>Created</td>
-        </thead>
-        <tbody>
-          {list.map((item, i) => (
-            <tr key={i}>
-              <td>{item.name}</td>
-              <td>{item.date}</td>
-            </tr>
-          ))}
-        </tbody>
+      <ul className="listItem_wrapper">
+        {
+          list.map((list)=>(
+            <li className="list_item">
+              <span>{list.name}</span>
+              <span>created on {list.date}</span>
+            </li>
+          ))
+        }
         <Link className="exit" to="/">Exit</Link>
-      </table>
+        </ul>
     );
   }
 
