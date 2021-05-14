@@ -20,7 +20,7 @@ const Todo = (props) => {
 
  }
   const showTodoList = () => {
-   return todo.length < 1? <h1>EMPTY LIST</h1>:
+   return !todo? <h1>EMPTY LIST</h1>:
     todo.map((todo, i) => (
       <div>
         <li key={i}>
