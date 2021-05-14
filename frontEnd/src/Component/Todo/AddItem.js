@@ -48,7 +48,7 @@ class AddItem extends Component {
   }
   showItem() {
     const { list,itemName } = this.state;
-    return list.length < 1 ? (
+    return !list? (
       <div className="emptyItem">ADD ITEM TO {itemName}</div>
     ) : (
       <table>
